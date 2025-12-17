@@ -12,7 +12,7 @@ A beautiful iOS and macOS app that generates WiFi QR codes for easy network shar
 
 ⚡ **Streamlined UX** - Just 2 fields (Network & Password) with smart defaults
 
-📱 **Universal App** - Works on both iPhone/iPad and Mac
+📱 **Universal App** - Works on iPhone and Mac
 
 🔒 **Security Support** - Supports WPA/WPA2/WPA3 and open networks
 
@@ -27,11 +27,11 @@ The app generates QR codes using the standard WiFi configuration format:
 WIFI:T:<security_type>;S:<ssid>;P:<password>;H:<hidden>;;
 ```
 
-When scanned with an iPhone or iPad camera (iOS 11+), the device will automatically prompt to join the network - no additional apps needed!
+When scanned with an iPhone camera (iOS 11+), the device will automatically prompt to join the network - no additional apps needed!
 
 ## Usage
 
-1. **Open the app** on your iPhone, iPad, or Mac
+1. **Open the app** on your iPhone or Mac
 2. **Network auto-detected** - Your current WiFi network is automatically filled in
 3. **Enter password** - Just type your WiFi password
 4. **Choose security** - Tap WPA (default) or Open for networks without passwords
@@ -48,7 +48,7 @@ When scanned with an iPhone or iPad camera (iOS 11+), the device will automatica
 ### Build Instructions
 
 1. Open `GuestPassQR.xcodeproj` in Xcode
-2. Select your target device (iPhone Simulator, iPad Simulator, or Mac)
+2. Select your target device (iPhone Simulator or Mac)
 3. Press `Cmd + R` to build and run
 
 Or use the command line:
@@ -93,7 +93,7 @@ The app follows the [ZXing WiFi QR Code format](https://github.com/zxing/zxing/w
 - **Older devices** - Use any QR code reader app
 
 ### Running the App
-- **iOS** - iPhone and iPad running iOS 17.0 or later
+- **iOS** - iPhone running iOS 17.0 or later
 - **macOS** - Mac running macOS 14.0 (Sonoma) or later
 
 ## License

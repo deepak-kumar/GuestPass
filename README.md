@@ -6,19 +6,17 @@ A beautiful iOS and macOS app that generates WiFi QR codes for easy network shar
 
 ✨ **Instant WiFi Sharing** - Generate QR codes that allow users to join your WiFi network by simply scanning - no manual password entry required!
 
-🎯 **Auto WiFi Detection** - Automatically detects and prefills your current WiFi network details
+📱 **Universal App** - Native support for both iPhone and Mac.
 
-🎨 **Minimalistic Design** - Clean, full-screen interface with simple dark theme
+🏷️ **Friendly Name Overlay** - Add a custom title to your QR code (e.g., "Guest WiFi", "Home Network") for a professional look.
 
-⚡ **Streamlined UX** - Just 2 fields (Network & Password) with smart defaults
+🎯 **Auto WiFi Detection** - Automatically detects and prefills your current WiFi network details.
 
-📱 **Universal App** - Works on iPhone and Mac
+🎨 **Minimalistic Design** - Clean, full-screen interface with a sleek dark theme.
 
-🔒 **Security Support** - Supports WPA/WPA2/WPA3 and open networks
+🔒 **Security Support** - Supports WPA/WPA2/WPA3 and open networks.
 
-🚀 **App Store Ready** - Includes professional app icons, launch screen, and privacy configurations
-
-✨ **One-Tap Generation** - Minimal clicks to generate your QR code
+🚀 **Privacy Focused** - Passwords are never stored or transmitted; all QR generation happens locally on-device.
 
 ## How It Works
 
@@ -27,16 +25,17 @@ The app generates QR codes using the standard WiFi configuration format:
 WIFI:T:<security_type>;S:<ssid>;P:<password>;H:<hidden>;;
 ```
 
-When scanned with an iPhone camera (iOS 11+), the device will automatically prompt to join the network - no additional apps needed!
+When scanned with an iPhone camera (iOS 11+) or any modern Android device, the device will automatically prompt to join the network - no additional apps needed!
 
 ## Usage
 
-1. **Open the app** on your iPhone or Mac
-2. **Network auto-detected** - Your current WiFi network is automatically filled in
-3. **Enter password** - Just type your WiFi password
-4. **Choose security** - Tap WPA (default) or Open for networks without passwords
-5. **Tap "Generate QR Code"**
-6. **Share with guests** - They scan it with their camera to instantly connect!
+1. **Open the app** on your iPhone or Mac.
+2. **Network auto-detected** - Your current WiFi network is automatically filled in.
+3. **Customize your pass** - Enter a "Friendly Name" to display as a title above the QR code.
+4. **Enter password** - Just type your WiFi password.
+5. **Choose security** - Select WPA (default) or Open for networks without passwords.
+6. **Tap "Generate QR Code"**.
+7. **Share with guests** - They scan it with their camera to instantly connect!
 
 ## Building the App
 

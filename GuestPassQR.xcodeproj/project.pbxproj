@@ -294,7 +294,7 @@
 				ENABLE_PREVIEWS = YES;
 				"EXCLUDED_SOURCE_FILE_NAMES[sdk=macosx*]" = LaunchScreen.storyboard;
 				INFOPLIST_FILE = GuestPassQR/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Guest Pass";
+				INFOPLIST_KEY_CFBundleDisplayName = "WiFi Invite";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -312,7 +312,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.deepak.guestpass.final;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "WiFi Invite";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -338,7 +338,7 @@
 				ENABLE_PREVIEWS = YES;
 				"EXCLUDED_SOURCE_FILE_NAMES[sdk=macosx*]" = LaunchScreen.storyboard;
 				INFOPLIST_FILE = GuestPassQR/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Guest Pass";
+				INFOPLIST_KEY_CFBundleDisplayName = "WiFi Invite";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -356,7 +356,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.deepak.guestpass.final;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "WiFi Invite";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";

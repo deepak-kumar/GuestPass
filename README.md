@@ -1,4 +1,4 @@
-# WiFi Invite
+# Wifi Invite
 
 A beautiful iOS and macOS app that generates WiFi QR codes for easy network sharing.
 

@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A1000016000000000000001"
-               BuildableName = "WiFi Invite.app"
+               BuildableName = "Wifi Invite.app"
                BlueprintName = "GuestPassQR"
                ReferencedContainer = "container:GuestPassQR.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A1000016000000000000001"
-            BuildableName = "WiFi Invite.app"
+            BuildableName = "Wifi Invite.app"
             BlueprintName = "GuestPassQR"
             ReferencedContainer = "container:GuestPassQR.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A1000016000000000000001"
-            BuildableName = "WiFi Invite.app"
+            BuildableName = "Wifi Invite.app"
             BlueprintName = "GuestPassQR"
             ReferencedContainer = "container:GuestPassQR.xcodeproj">
          </BuildableReference>

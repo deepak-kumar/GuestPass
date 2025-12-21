@@ -31,9 +31,16 @@ struct ContentView: View {
                                 .fontWeight(.semibold)
                                 .foregroundColor(.white)
                             
-                            Text("Add your WiFi details to get started")
+                            Text("Create QR codes to share WiFi with guests")
                                 .font(.body)
                                 .foregroundColor(.gray)
+                                .multilineTextAlignment(.center)
+                            
+                            Text("Just scan to connect—no password typing needed!")
+                                .font(.caption)
+                                .foregroundColor(.gray.opacity(0.7))
+                                .multilineTextAlignment(.center)
+                                .padding(.horizontal, 40)
                         }
                         
                         Button(action: { isAddingNetwork = true }) {
@@ -141,13 +148,23 @@ struct NetworkListRow: View {
                 .cornerRadius(10)
             
             VStack(alignment: .leading, spacing: 4) {
-                Text(network.ssid)
-                    .font(.headline)
-                    .foregroundColor(.white)
-                
-                Text(network.securityType.displayName)
-                    .font(.caption)
-                    .foregroundColor(.gray)
+                if !network.friendlyName.isEmpty {
+                    Text(network.friendlyName)
+                        .font(.headline)
+                        .foregroundColor(.white)
+                    
+                    Text("\(network.ssid) • \(network.securityType.displayName)")
+                        .font(.caption)
+                        .foregroundColor(.gray)
+                } else {
+                    Text(network.ssid)
+                        .font(.headline)
+                        .foregroundColor(.white)
+                    
+                    Text(network.securityType.displayName)
+                        .font(.caption)
+                        .foregroundColor(.gray)
+                }
             }
             
             Spacer()

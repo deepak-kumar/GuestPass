@@ -25,10 +25,22 @@ struct QRCodeDisplayView: View {
                             .foregroundColor(.white)
                             .padding(.bottom, 8)
                             
-                        Text(network.ssid)
-                            .font(.system(size: 32, weight: .bold))
-                            .foregroundColor(.white)
-                            .multilineTextAlignment(.center)
+                        if !network.friendlyName.isEmpty {
+                            Text(network.friendlyName)
+                                .font(.system(size: 32, weight: .bold))
+                                .foregroundColor(.white)
+                                .multilineTextAlignment(.center)
+                            
+                            Text("SSID: \(network.ssid)")
+                                .font(.headline)
+                                .foregroundColor(.white.opacity(0.8))
+                                .multilineTextAlignment(.center)
+                        } else {
+                            Text(network.ssid)
+                                .font(.system(size: 32, weight: .bold))
+                                .foregroundColor(.white)
+                                .multilineTextAlignment(.center)
+                        }
                         
                     }
                     .padding(.horizontal)

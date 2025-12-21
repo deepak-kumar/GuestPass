@@ -32,15 +32,36 @@ struct WiFiConfig: Identifiable, Codable, Equatable {
     var password: String = ""
     var securityType: WiFiSecurityType = .wpa
     var isHidden: Bool = false
+    var friendlyName: String = ""
     var createdAt: Date = Date()
     
-    init(id: UUID = UUID(), ssid: String = "", password: String = "", securityType: WiFiSecurityType = .wpa, isHidden: Bool = false, createdAt: Date = Date()) {
+    init(id: UUID = UUID(), ssid: String = "", password: String = "", securityType: WiFiSecurityType = .wpa, isHidden: Bool = false, friendlyName: String = "", createdAt: Date = Date()) {
         self.id = id
         self.ssid = ssid
         self.password = password
         self.securityType = securityType
         self.isHidden = isHidden
+        self.friendlyName = friendlyName
         self.createdAt = createdAt
+    }
+    
+    // CodingKeys for Codable support
+    enum CodingKeys: String, CodingKey {
+        case id, ssid, password, securityType, isHidden, friendlyName, createdAt
+    }
+    
+    // Custom decoding to handle missing friendlyName in older data
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        id = try container.decode(UUID.self, forKey: .id)
+        ssid = try container.decode(String.self, forKey: .ssid)
+        password = try container.decode(String.self, forKey: .password)
+        securityType = try container.decode(WiFiSecurityType.self, forKey: .securityType)
+        isHidden = try container.decode(Bool.self, forKey: .isHidden)
+        createdAt = try container.decode(Date.self, forKey: .createdAt)
+        
+        // Use decodeIfPresent for friendlyName to support older saved data
+        friendlyName = try container.decodeIfPresent(String.self, forKey: .friendlyName) ?? ""
     }
     
     /// Generates the WiFi configuration string in the standard format

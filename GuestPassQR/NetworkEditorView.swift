@@ -47,7 +47,7 @@ struct NetworkEditorView: View {
                             .foregroundColor(.secondary)
                         TextField("e.g. Home, Office, Guest", text: $config.friendlyName)
                             .padding(12)
-                            .background(Color(.systemGray6))
+                            .background(Color.primary.opacity(0.05))
                             .cornerRadius(10)
                     }
                     
@@ -64,7 +64,7 @@ struct NetworkEditorView: View {
                                 .textInputAutocapitalization(.never)
                             #endif
                                 .padding(12)
-                                .background(Color(.systemGray6))
+                                .background(Color.primary.opacity(0.05))
                                 .cornerRadius(10)
                             
 
@@ -112,7 +112,7 @@ struct NetworkEditorView: View {
                             .textContentType(.password)
                         #endif
                             .padding(12)
-                            .background(Color(.systemGray6))
+                            .background(Color.primary.opacity(0.05))
                             .cornerRadius(10)
                     }
                     

@@ -1,6 +1,9 @@
 # Wifi Invite
 
+[![Download on the App Store](https://img.shields.io/badge/Download_on_the-App_Store-blue.svg?logo=apple&logoColor=white)](https://apps.apple.com/app/id6756671461)
+
 A beautiful iOS and macOS app that generates WiFi QR codes for easy network sharing.
+
 
 ## Features
 

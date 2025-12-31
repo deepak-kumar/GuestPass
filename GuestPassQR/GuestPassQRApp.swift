@@ -11,7 +11,7 @@ import SwiftUI
 struct GuestPassQRApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SplashScreenView()
         }
         #if os(macOS)
         .windowStyle(.hiddenTitleBar)

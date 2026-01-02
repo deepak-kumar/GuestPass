@@ -129,9 +129,7 @@ struct ContentView: View {
                 NetworkEditorView(storage: storage, existingNetwork: network)
             }
         }
-        #if os(iOS)
         .preferredColorScheme(.dark)
-        #endif
     }
 }
 

@@ -100,7 +100,7 @@
 			dependencies = (
 			);
 			name = GuestPassQR;
-			productName = "Wifi Invite";
+			productName = "WiFi Invite";
 			productReference = A1000011000000000000001 /* GuestPassQR.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -290,6 +290,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				"CODE_SIGN_ENTITLEMENTS[sdk=iphoneos*]" = GuestPassQR/GuestPassQR.entitlements;
 				"CODE_SIGN_ENTITLEMENTS[sdk=iphonesimulator*]" = GuestPassQR/GuestPassQR.entitlements;
+				"CODE_SIGN_ENTITLEMENTS[sdk=macosx*]" = GuestPassQR/GuestPassQR.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
@@ -298,8 +299,10 @@
 				ENABLE_PREVIEWS = YES;
 				"EXCLUDED_SOURCE_FILE_NAMES[sdk=macosx*]" = LaunchScreen.storyboard;
 				INFOPLIST_FILE = GuestPassQR/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Wifi Invite";
-				INFOPLIST_KEY_CFBundleName = "Wifi Invite";
+				INFOPLIST_KEY_CFBundleDisplayName = "WiFi Invite";
+				INFOPLIST_KEY_CFBundleName = "WiFi Invite";
+"INFOPLIST_KEY_LSRequiresIPhoneOS[sdk=iphoneos*]" = YES;
+"INFOPLIST_KEY_LSRequiresIPhoneOS[sdk=macosx*]" = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -317,14 +320,14 @@
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.deepak.guestpass.final;
-				PRODUCT_NAME = "Wifi Invite";
+				PRODUCT_NAME = "WiFi Invite";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -335,6 +338,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				"CODE_SIGN_ENTITLEMENTS[sdk=iphoneos*]" = GuestPassQR/GuestPassQR.entitlements;
 				"CODE_SIGN_ENTITLEMENTS[sdk=iphonesimulator*]" = GuestPassQR/GuestPassQR.entitlements;
+				"CODE_SIGN_ENTITLEMENTS[sdk=macosx*]" = GuestPassQR/GuestPassQR.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
@@ -343,8 +347,10 @@
 				ENABLE_PREVIEWS = YES;
 				"EXCLUDED_SOURCE_FILE_NAMES[sdk=macosx*]" = LaunchScreen.storyboard;
 				INFOPLIST_FILE = GuestPassQR/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Wifi Invite";
-				INFOPLIST_KEY_CFBundleName = "Wifi Invite";
+				INFOPLIST_KEY_CFBundleDisplayName = "WiFi Invite";
+				INFOPLIST_KEY_CFBundleName = "WiFi Invite";
+"INFOPLIST_KEY_LSRequiresIPhoneOS[sdk=iphoneos*]" = YES;
+"INFOPLIST_KEY_LSRequiresIPhoneOS[sdk=macosx*]" = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -362,14 +368,14 @@
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.deepak.guestpass.final;
-				PRODUCT_NAME = "Wifi Invite";
+				PRODUCT_NAME = "WiFi Invite";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

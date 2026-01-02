@@ -1,8 +1,8 @@
-# Privacy Policy for Wifi Invite
+# Privacy Policy for WiFi Invite
 
 **Effective Date:** December 21, 2025
 
-**Wifi Invite** ("the App") is designed to respect your privacy. We do not collect, store, or share any personal information.
+**WiFi Invite** ("the App") is designed to respect your privacy. We do not collect, store, or share any personal information.
 
 ## 1. Data Collection
 We do not collect any personal data, usage statistics, or analytics. The App operates entirely offline on your device.

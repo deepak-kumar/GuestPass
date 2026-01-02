@@ -158,9 +158,7 @@ struct NetworkEditorView: View {
             // WiFi detection disabled on appear to prevent UI freeze on devices without WiFi.
             // Users can tap the WiFi button next to the SSID field to detect the current network.
         }
-        #if os(iOS)
         .preferredColorScheme(.dark)
-        #endif
     }
     
     private func saveNetwork() {

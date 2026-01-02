@@ -196,7 +196,7 @@ struct SplashScreenView: View {
                         .kerning(2)
                         .foregroundColor(.green.opacity(0.8))
                     
-                    Text("Your credentials never leave your iPhone. We don't use the cloud, we don't track you, and we definitely don't sell your data.")
+                    Text("Your credentials never leave your device. We don't use the cloud, we don't track you, and we definitely don't sell your data.")
                         .font(.system(size: 18, weight: .medium, design: .rounded))
                         .foregroundColor(.gray)
                         .multilineTextAlignment(.center)

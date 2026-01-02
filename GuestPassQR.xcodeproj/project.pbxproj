@@ -301,8 +301,6 @@
 				INFOPLIST_FILE = GuestPassQR/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "WiFi Invite";
 				INFOPLIST_KEY_CFBundleName = "WiFi Invite";
-"INFOPLIST_KEY_LSRequiresIPhoneOS[sdk=iphoneos*]" = YES;
-"INFOPLIST_KEY_LSRequiresIPhoneOS[sdk=macosx*]" = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -349,8 +347,6 @@
 				INFOPLIST_FILE = GuestPassQR/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "WiFi Invite";
 				INFOPLIST_KEY_CFBundleName = "WiFi Invite";
-"INFOPLIST_KEY_LSRequiresIPhoneOS[sdk=iphoneos*]" = YES;
-"INFOPLIST_KEY_LSRequiresIPhoneOS[sdk=macosx*]" = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;

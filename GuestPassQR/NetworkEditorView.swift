@@ -6,21 +6,12 @@
 //
 
 import SwiftUI
-#if os(iOS)
-import NetworkExtension
-import CoreLocation
-#elseif os(macOS)
-import CoreWLAN
-import CoreLocation
-#endif
 
 struct NetworkEditorView: View {
     @Environment(\.dismiss) var dismiss
     @ObservedObject var storage: NetworkStorage
     
     @State private var config: WiFiConfig
-    @State private var nearbyNetworks: [String] = []
-    @State private var isScanning = false
     private let isEditing: Bool
     
     init(storage: NetworkStorage, existingNetwork: WiFiConfig? = nil) {
@@ -56,50 +47,15 @@ struct NetworkEditorView: View {
                         Text("Network Name")
                             .font(.headline)
                             .foregroundColor(.secondary)
-                        HStack {
-                            TextField("SSID", text: $config.ssid)
-                            #if os(iOS)
-                                .autocapitalization(.none)
-                                .autocorrectionDisabled()
-                                .textInputAutocapitalization(.never)
-                            #endif
-                                .padding(12)
-                                .background(Color.primary.opacity(0.05))
-                                .cornerRadius(10)
-                            
-
-                            
-                            #if os(macOS)
-                            Menu {
-                                if isScanning {
-                                    Text("Scanning...")
-                                } else if nearbyNetworks.isEmpty {
-                                    Button("Scan for Networks") {
-                                        scanForNetworks()
-                                    }
-                                } else {
-                                    ForEach(nearbyNetworks, id: \.self) { ssid in
-                                        Button(ssid) {
-                                            config.ssid = ssid
-                                        }
-                                    }
-                                    Divider()
-                                    Button("Rescan") {
-                                        scanForNetworks()
-                                    }
-                                }
-                            } label: {
-                                Image(systemName: isScanning ? "antenna.radiowaves.left.and.right" : "wifi.circle")
-                                    .font(.system(size: 20))
-                                    .foregroundColor(.accentColor)
-                            }
-                            .menuStyle(.borderlessButton)
-                            .fixedSize()
-                            .onAppear {
-                                scanForNetworks()
-                            }
-                            #endif
-                        }
+                        TextField("SSID", text: $config.ssid)
+                        #if os(iOS)
+                            .autocapitalization(.none)
+                            .autocorrectionDisabled()
+                            .textInputAutocapitalization(.never)
+                        #endif
+                            .padding(12)
+                            .background(Color.primary.opacity(0.05))
+                            .cornerRadius(10)
                     }
                     
                     // Password
@@ -155,8 +111,6 @@ struct NetworkEditorView: View {
                     Button("Cancel") { dismiss() }
                 }
             }
-            // WiFi detection disabled on appear to prevent UI freeze on devices without WiFi.
-            // Users can tap the WiFi button next to the SSID field to detect the current network.
         }
         .preferredColorScheme(.dark)
     }
@@ -164,37 +118,5 @@ struct NetworkEditorView: View {
     private func saveNetwork() {
         storage.saveNetwork(config)
         dismiss()
-    }
-    
-    // WiFi detection removed to fix UI freeze issues.
-    
-    private func scanForNetworks() {
-        #if os(macOS)
-        isScanning = true
-        
-        DispatchQueue.global(qos: .userInitiated).async {
-            if let interface = CWWiFiClient.shared().interface() {
-                do {
-                    // Scanning might take a few seconds
-                    let networks = try interface.scanForNetworks(withSSID: nil)
-                    let ssids = Array(Set(networks.compactMap { $0.ssid })).sorted()
-                    
-                    DispatchQueue.main.async {
-                        self.nearbyNetworks = ssids
-                        self.isScanning = false
-                    }
-                } catch {
-                    print("Scan failed: \(error)")
-                    DispatchQueue.main.async {
-                        self.isScanning = false
-                    }
-                }
-            } else {
-                DispatchQueue.main.async {
-                    self.isScanning = false
-                }
-            }
-        }
-        #endif
     }
 }
